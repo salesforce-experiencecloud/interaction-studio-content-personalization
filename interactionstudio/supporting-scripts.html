@@ -1,0 +1,72 @@
+<!--
+Copyright (c) 2021, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+-->
+
+<script type="text/javascript">
+    var interactionStudioExperienceCloudHelpers = {
+        /* Container for the captured user data */
+        userData: null,
+        
+        /**
+        * The following function checks if website is running in
+        * Experience Cloud Builder Context based on the current hostname.
+        * If YES, it sends an Event to all Interaction Studio LWCs to show
+        * placeholder content.
+        */
+        catchBuilderContext: function(){
+            const hostname = window?.location?.hostname?.toLowerCase();
+            
+            if(
+                hostname?.indexOf('sitepreview') > 0 
+                || hostname?.indexOf('livepreview') > 0
+                || window.localStorage.getItem('evgVE') === 'true'
+            ){
+                document.dispatchEvent(new CustomEvent('interactionstudio_onbuildercontextdetected'));
+            }
+        }
+    };
+
+
+    /**
+    * Every time a new Interaction Studio LWC is initialized, it sends an
+    * lwc_oncomponentready event. The following listener creates a hidden
+    * DIV element for every personalization component and appends it to the
+    * BODY of the page. This DIV element is used by Interaction Studio Web
+    * Templates to identify that the Personalization LWC is ready to receive
+    * personalized content.
+    */
+    document.addEventListener('lwc_oncomponentready', (e) => {
+        interactionStudioExperienceCloudHelpers.catchBuilderContext();
+
+        const contentZoneId = e.detail && e.detail.contentZone;
+
+        if (!contentZoneId || document.getElementById('#' + contentZoneId)) return;
+
+        const placeholder = document.createElement('div');
+        placeholder.id = contentZoneId;
+        placeholder.style.display = 'none';
+        
+        document.body.append(placeholder);
+    });
+
+
+    /**
+    * The following listener is bypassing stat events(campaign impression/campaign click)
+    * from Personalization LWCs to Interaction Studio
+    */
+    document.addEventListener('lwc_onstatsend', (e) => {
+        Evergage.sendStat(e.detail);
+    });
+
+
+    /**
+    * The following listener is bypassing Custom Interaction Studio events
+    * from Personalization LWCs to Interaction Studio
+    */
+    document.addEventListener('lwc_oneventsend', (e) => {
+        Evergage.sendEvent(e.detail);
+    });
+</script>
