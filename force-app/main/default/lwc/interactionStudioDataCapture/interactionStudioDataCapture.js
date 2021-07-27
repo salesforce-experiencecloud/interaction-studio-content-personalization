@@ -31,23 +31,25 @@ export default class InteractionStudioDataCapture extends LightningElement {
         }
         else if (data) {
             this.initInteractionStudio(data);
-            
-            document.addEventListener('evergage:onInit', () => {
-                setTimeout(() => {
-                    this.initInteractionStudio(data);
-                }, 100);
-            })
         }
         else if (error) {
             console.debug('wiredRecord error: ', error);
         }
     }
 
-    initInteractionStudio(userData) {
-        document.dispatchEvent(new CustomEvent('lwc_onuserdataready', {
+	initInteractionStudio(userData) {
+        const event = new CustomEvent('lwc_onuserdataready', {
             bubbles: true,
             composed: true,
             detail: { userData: userData }
-        }));
+        });
+		
+		document.dispatchEvent(event);
+
+		document.addEventListener('evergage:onInit', () => {
+			setTimeout(() => {
+				document.dispatchEvent(event);
+			}, 100);
+		});
     }
 }
