@@ -37,19 +37,19 @@ export default class InteractionStudioDataCapture extends LightningElement {
         }
     }
 
-	initInteractionStudio(userData) {
+    initInteractionStudio(userData) {
         const event = new CustomEvent('lwc_onuserdataready', {
             bubbles: true,
             composed: true,
             detail: { userData: userData }
         });
-		
-		document.dispatchEvent(event);
+        
+        document.dispatchEvent(event);
 
-		document.addEventListener('evergage:onInit', () => {
-			setTimeout(() => {
-				document.dispatchEvent(event);
-			}, 100);
-		});
+        document.addEventListener('evergage:onInit', () => {
+            setTimeout(() => {
+                document.dispatchEvent(event);
+            }, 100);
+        });
     }
 }
