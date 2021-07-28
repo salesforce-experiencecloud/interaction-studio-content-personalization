@@ -1,17 +1,19 @@
-# Salesforce DX Project: Next Steps
+# Sample Codes: Use Interaction Studio to Personalize Experience Cloud Websites
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+[Interaction Studio and Experience Cloud Solution Kit](https://help.salesforce.com/#) is a detailed step by step guide that describes how to easily integrate two platforms together and start using AI-powered personalized recommendations from Interaction Studio on your Experience Cloud Websites. This repository includes examples of the two custom open source Experience Cloud components that will help you to capture the data of the logged-in users and start personalizing the content of you website. It also includes an example of the Interaction Studio sitemap and other technical details that you'll need during the implementation phase.
 
-## How Do You Plan to Deploy Your Changes?
+Please refer to the [Solution Kit](https://help.salesforce.com/#) for detailed integration instructions.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Sample Codes
 
-## Configure Your Salesforce DX Project
+- [User Data Capture Component](force-app/main/default/lwc/interactionStudioDataCapture)
+- [Personalization Component](force-app/main/default/lwc/interactionStudioPersonalization)
+- [Example of the Sitemap](interactionstudio/sitemap-example.js)
+- [Supporting Scripts](interactionstudio/supporting-scripts.html)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Additional Documentation
 
-## Read All About It
-
+- [Interaction Studio Sitemap Development](https://developer.evergage.com/web-integration/sitemap)
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
