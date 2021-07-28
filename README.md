@@ -1,6 +1,8 @@
 # Sample Codes: Use Interaction Studio to Personalize Experience Cloud Websites
 
-[Interaction Studio and Experience Cloud Solution Kit](https://help.salesforce.com/#) is a detailed step by step guide that describes how to easily integrate two platforms together and start using AI-powered personalized recommendations from Interaction Studio on your Experience Cloud Websites. This repository includes examples of the two custom open source Experience Cloud components that will help you to capture the data of the logged-in users and start personalizing the content of you website. It also includes an example of the Interaction Studio sitemap and other technical details that you'll need during the implementation phase.
+[Interaction Studio and Experience Cloud Solution Kit](https://help.salesforce.com/#) is a detailed step by step guide that describes how to easily integrate two platforms together and start using AI-powered personalized recommendations from Interaction Studio on your Experience Cloud Websites. 
+
+This repository includes examples of the two custom open source Experience Cloud components that will help you to capture the data of the logged-in users and start personalizing the content of you website. It also includes an example of the Interaction Studio sitemap and other technical details that you'll need during the implementation phase.
 
 Please refer to the [Solution Kit](https://help.salesforce.com/#) for detailed integration instructions.
 
