@@ -1,16 +1,16 @@
 # Sample Codes: Use Interaction Studio to Personalize Experience Cloud Websites
 
-[Interaction Studio and Experience Cloud Solution Kit](https://help.salesforce.com/#) is a detailed step by step guide that describes how to easily integrate two platforms together and start using AI-powered personalized recommendations from Interaction Studio on your Experience Cloud Websites. 
+[The Interaction Studio and Experience Cloud Solution Kit](https://help.salesforce.com/articleView?id=sf.use_interaction_studio_to_personalize_websites.htm&type=5) is a detailed step-by-step guide that describes how to integrate Experience Cloud and Interaction Studio. After you complete the integration, you can use AI-powered personalized recommendations from Interaction Studio on your Experience Cloud websites.
 
-This repository includes examples of the two custom open source Experience Cloud components that will help you to capture the data of the logged-in users and start personalizing the content of you website. It also includes an example of the Interaction Studio sitemap and other technical details that you'll need during the implementation phase.
+This repository includes examples of the two custom, open-source Experience Cloud components. The components capture logged-in user data, which you can use to personalize the content of your website. It also includes an example of the Interaction Studio sitemap and other technical details that you need during implementation.
 
-Please refer to the [Solution Kit](https://help.salesforce.com/#) for detailed integration instructions.
+Refer to the [Solution Kit](https://help.salesforce.com/articleView?id=sf.use_interaction_studio_to_personalize_websites.htm&type=5) for detailed integration instructions.
 
 ## Sample Codes
 
 - [User Data Capture Component](force-app/main/default/lwc/interactionStudioDataCapture)
 - [Personalization Component](force-app/main/default/lwc/interactionStudioPersonalization)
-- [Example of the Sitemap](interactionstudio/sitemap-example.js)
+- [Sitemap Example](interactionstudio/sitemap-example.js)
 - [Supporting Scripts](interactionstudio/supporting-scripts.html)
 
 ## Additional Documentation
