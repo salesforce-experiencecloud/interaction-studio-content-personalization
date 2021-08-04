@@ -149,8 +149,8 @@ For full license text, see the LICENSE file in the repo root or https://opensour
                     </g>
                 </svg>
                 <div class="slds-text-longform">
-                    <h3 class="slds-text-heading_small slds-text-color_weak">You haven't set a Content Zone yet</h3>
-                    <p class="slds-text-body_regular slds-text-color_weak">Please identify the Content Zone in order for your dynamic content to appear here</p>
+                    <h3 class="slds-text-heading_small slds-text-color_weak">No content zone yet</h3>
+                    <p class="slds-text-body_regular slds-text-color_weak">Use the Content Zone selector and enter a content zone name. Content associated with that content zone appears here.</p>
                 </div>
             </div>
         </div>
@@ -330,10 +330,13 @@ For full license text, see the LICENSE file in the repo root or https://opensour
                     <p class="slds-text-body_regular slds-text-color_weak">
                         <lightning-icon icon-name="utility:success" alternative-text="Enabled" title="Enabled" size="x-small" variant="success"></lightning-icon>
                         <span class="slds-p-horizontal_x-small" style="color: #1B7E46; font-weight: strong;">Enabled</span>
-                        <span class="slds-text-color_weak">Content Zone Name: "{contentZone}" | Content Zone Selector: #{contentZone}</span>
+                        <span class="slds-text-color_weak">This component can receive Interaction Studio personalized content.</span>
                     </p>
                     <p class="slds-text-body_regular slds-text-color_weak">
-                        Interaction Studio content will appear here once the campaign is set to display in this content zone
+                        Configured Content Zone Name: "{contentZone}" | Configured Content Zone Selector: #{contentZone}
+                    </p>
+                    <p class="slds-text-body_regular slds-text-color_weak">
+                        After you set the campaign to display in this content zone and configure the content zone in the site map, Interaction Studio personalized content appears here.
                     </p>
                 </div>
             </div>

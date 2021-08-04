@@ -11,10 +11,13 @@ For full license text, see the LICENSE file in the repo root or https://opensour
         <p class="slds-text-body_regular slds-text-color_weak slds-m-bottom_small">
             <lightning-icon icon-name="utility:success" alternative-text="Enabled" title="Enabled" size="x-small" variant="success"></lightning-icon>
             <span class="slds-p-horizontal_x-small" style="color: #1B7E46; font-weight: strong;">Enabled</span>
-            <span class="slds-text-color_weak">Don't forget to configure user data capture in your Interaction Studio sitemap</span>
+            <span class="slds-text-color_weak">Experience Cloud can send events to Interaction Studio</span>
         </p>
         <p class="slds-text-body_regular slds-text-color_weak">
-            This component will capture and send relevant data to Interaction Studio and will not display on the live site
+            To capture known user data, make sure that the global onActionEvent is configured in your Interaction Studio sitemap.
+        </p>
+        <p class="slds-text-body_regular slds-text-color_weak">
+            This component works in the background to capture and send visitor data to Interaction Studio.
         </p>
     </div>
 </template>
