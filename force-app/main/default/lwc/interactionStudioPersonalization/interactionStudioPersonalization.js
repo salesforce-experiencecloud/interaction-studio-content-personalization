@@ -58,7 +58,7 @@ export default class InteractionStudioPersonalization extends LightningElement {
         const list = this.template.querySelectorAll('div.interactionstudio_content a');
         list.forEach(node => {
             node.addEventListener('click', (e) => {
-                this.sendStat('Clickthrough', e?.toElement?.closest('[data-evg-experience-id]'));
+                this.sendStat('Clickthrough', e?.target?.closest('[data-evg-experience-id]'));
             });
         });
     }
